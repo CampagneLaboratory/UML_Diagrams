@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aa574c9c-b933-4943-b735-ea992e6572ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/modules.xml" afterPath="$PROJECT_DIR$/.mps/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/workspace.xml" afterPath="$PROJECT_DIR$/.mps/workspace.xml" />
     </list>
     <ignored path="UML_Diagrams.iws" />
@@ -66,7 +65,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -96,7 +95,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -127,7 +126,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -158,7 +157,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -172,8 +171,68 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57429045" vertical-offset="166" max-vertical-offset="765">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7352941" vertical-offset="240" max-vertical-offset="915">
+              <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="concept" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://org.campagnelab.diagrams#5039633819242476386/org.campagnelab.diagrams.generator.ToPlantUmlText@generator/concept">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="66" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:5844531d-8dd6-4362-acb9-fa3971a579c5(org.campagnelab.diagrams.generator.ToPlantUmlText@generator)/5039633819242565201" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToPlantUML" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://org.campagnelab.diagrams#5039633819242476386/org.campagnelab.diagrams.generator.ToPlantUmlText@generator/ToPlantUML">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="187" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:5844531d-8dd6-4362-acb9-fa3971a579c5(org.campagnelab.diagrams.generator.ToPlantUmlText@generator)/5039633819242476794" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
             </state>
           </provider>
         </entry>
@@ -198,7 +257,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -306,7 +365,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="FileSystem" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -322,6 +381,20 @@
       <pane id="FileSystem">
         <subPane>
           <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -347,6 +420,54 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams#5039633819242476386">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams.generator.ToPlantUmlText">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams#5039633819242476386">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -602,7 +723,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Initial import of UML diagrams language (initially developed in NYoSh on the diagrams branch). Added build script to make an MPS plugin." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial import of UML diagrams language (initially developed in NYoSh on the diagrams branch). Added build script to make an MPS plugin." />
+    <MESSAGE value="Use code formatting for puml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use code formatting for puml." />
   </component>
   <component name="editorHistoryManager">
     <entry file="mps://node://UML_Diagrams.build/UML_Diagrams.build/UML_Diagrams">
@@ -624,7 +746,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -652,7 +774,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -681,7 +803,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -710,7 +832,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -739,7 +861,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -750,8 +872,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57429045" vertical-offset="166" max-vertical-offset="765">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7352941" vertical-offset="240" max-vertical-offset="915">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://org.campagnelab.diagrams#5039633819242476386/org.campagnelab.diagrams.generator.ToPlantUmlText@generator/concept">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="66" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:5844531d-8dd6-4362-acb9-fa3971a579c5(org.campagnelab.diagrams.generator.ToPlantUmlText@generator)/5039633819242565201" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://org.campagnelab.diagrams#5039633819242476386/org.campagnelab.diagrams.generator.ToPlantUmlText@generator/ToPlantUML">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="187" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:5844531d-8dd6-4362-acb9-fa3971a579c5(org.campagnelab.diagrams.generator.ToPlantUmlText@generator)/5039633819242476794" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
         </state>
       </provider>
     </entry>
