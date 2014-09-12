@@ -1,0 +1,23 @@
+@startuml
+
+package org.campagnelab.diagrams {
+
+class LanguageView {
+}
+BaseConcept <|-- LanguageView 
+LanguageView o-- Language
+
+
+class ConceptReference {
+}
+BaseConcept <|-- ConceptReference 
+
+
+class Language {
+}
+BaseConcept <|-- Language 
+Language o-- ConceptReference
+
+}
+@enduml
+
