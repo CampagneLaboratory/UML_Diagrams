@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/TestLanguage/TestLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/org.campagnelab.diagrams/org.campagnelab.diagrams.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Sandbox/Sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/UML_Diagrams.build/UML_Diagrams.build.msd" folder="" />

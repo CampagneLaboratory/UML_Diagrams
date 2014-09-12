@@ -1,0 +1,13 @@
+@startuml
+
+package TestLanguage {
+
+class Child {
+}
+
+class Parent {
+}
+Parent o-- Child : child
+}
+@enduml
+

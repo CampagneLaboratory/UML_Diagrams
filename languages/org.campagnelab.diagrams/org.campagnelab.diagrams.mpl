@@ -16,6 +16,7 @@
       <external-templates />
       <dependencies>
         <dependency reexport="false">c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)</dependency>
+        <dependency reexport="false">dd26ed27-df95-40b9-a21d-b56035865e78(org.campagnelab.diagrams)</dependency>
         <dependency reexport="false">901f5cf3-dc77-4c1e-bc5a-6382baee28b4(org.campagnelab.textoutput)</dependency>
       </dependencies>
       <usedLanguages>

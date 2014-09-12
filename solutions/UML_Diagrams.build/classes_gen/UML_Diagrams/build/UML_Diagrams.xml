@@ -4,9 +4,10 @@
   <property name="build.tmp" location="${build.dir}/tmp/UML_Diagrams" />
   <property name="build.layout" location="${build.dir}/artifacts/UML_Diagrams" />
   <property name="mps_home" location="" />
-  <property name="org.campagnelab.goby.workbench.home" location="" />
+  <property name="org.campagnelab.goby.workbench.home" location="${basedir}/../NYoSh" />
+  <property name="diagrams_version" value="1.1.0" />
   <property name="artifacts.mps" location="${mps_home}" />
-  <property name="artifacts.org.campagnelab.TextOutput" location="${org.campagnelab.goby.workbench.home}" />
+  <property name="artifacts.org.campagnelab.TextOutput" location="${org.campagnelab.goby.workbench.home}/build/artifacts/org.campagnelab.TextOutput" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property file="${artifacts.org.campagnelab.TextOutput}/build.properties" prefix="import.org.campagnelab.TextOutput" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
@@ -25,14 +26,16 @@
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}" />
-    <mkdir dir="${build.tmp}/default/UML_Diagrams.zip" />
-    <mkdir dir="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams" />
-    <mkdir dir="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/META-INF" />
-    <echoxml file="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams" />
+    <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/META-INF" />
+    <echoxml file="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
-        <id>UML_Diagrams</id>
-        <name>UML_Diagrams</name>
-        <version>1.0</version>
+        <id>org.campagnelab.UML_Diagrams</id>
+        <name>org.campagnelab.UML_Diagrams</name>
+        <description>Language to assemble UML class diagrams a subset of concepts from MPS Languages.</description>
+        <version>${diagrams_version}</version>
+        <vendor url="http://books.campagnelab.org">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>org.campagnelab.TextOutput</depends>
         <idea-version until-build="136.1" since-build="135.1" />
@@ -42,8 +45,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/languages" />
-    <mkdir dir="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/languages/UML_Diagrams" />
+    <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/languages" />
+    <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/languages/UML_Diagrams" />
     <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams.jar" />
     <mkdir dir="${build.tmp}/default/org.campagnelab.diagrams.jar/META-INF" />
     <echoxml file="${build.tmp}/default/org.campagnelab.diagrams.jar/META-INF/module.xml">
@@ -64,12 +67,12 @@
         <sources jar="org.campagnelab.diagrams-src.jar" descriptor="org.campagnelab.diagrams.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams.jar">
+    <jar destfile="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams.jar">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.diagrams" />
       <fileset dir="${basedir}/languages/org.campagnelab.diagrams" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/org.campagnelab.diagrams.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams-generator.jar">
+    <jar destfile="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams-generator.jar">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.diagrams#5039633819242476386" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.diagrams-generator-template">
@@ -78,7 +81,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.diagrams-languageModels">
       <fileset dir="${basedir}/languages/org.campagnelab.diagrams/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/UML_Diagrams.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams-src.jar">
+    <jar destfile="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip/UML_Diagrams/languages/UML_Diagrams/org.campagnelab.diagrams-src.jar">
       <fileset dir="${basedir}/languages/org.campagnelab.diagrams/generator/source_gen">
         <exclude name="**/trace.info" />
       </fileset>
@@ -89,10 +92,10 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.diagrams-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.diagrams-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/UML_Diagrams.zip">
-      <fileset dir="${build.tmp}/default/UML_Diagrams.zip" />
+    <zip destfile="${build.layout}/org.campagnelab.diagrams-${diagrams_version}.zip">
+      <fileset dir="${build.tmp}/default/org.campagnelab.diagrams-_dl__lbrace_diagrams_version_rbrace_.zip" />
     </zip>
-    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}org.campagnelab.TextOutput.version=${org.campagnelab.TextOutput.version}</echo>
+    <echo file="${build.layout}/build.properties">UML_Diagrams.diagrams_version=${diagrams_version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}org.campagnelab.TextOutput.version=${org.campagnelab.TextOutput.version}</echo>
   </target>
   
   <target name="buildDependents" />

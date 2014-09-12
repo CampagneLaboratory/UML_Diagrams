@@ -5,7 +5,7 @@
   <property name="build.layout" location="${build.dir}/artifacts/UML_Diagrams" />
   <property name="mps_home" location="" />
   <property name="org.campagnelab.goby.workbench.home" location="${basedir}/../NYoSh" />
-  <property name="diagrams_version" value="1.0.0" />
+  <property name="diagrams_version" value="1.1.0" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.org.campagnelab.TextOutput" location="${org.campagnelab.goby.workbench.home}/build/artifacts/org.campagnelab.TextOutput" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />

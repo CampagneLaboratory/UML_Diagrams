@@ -18,8 +18,10 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 0:
         return Collections.<ConceptEditor>singletonList(new ConceptReference_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new Language_Editor());
+        return Collections.<ConceptEditor>singletonList(new HiddenConcepts_Editor());
       case 2:
+        return Collections.<ConceptEditor>singletonList(new Language_Editor());
+      case 3:
         return Collections.<ConceptEditor>singletonList(new LanguageView_Editor());
       default:
     }
@@ -32,5 +34,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
 
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.HiddenConcepts", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
 }

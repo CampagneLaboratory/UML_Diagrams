@@ -15,6 +15,7 @@ import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
@@ -38,9 +39,13 @@ public class LanguageView_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createConstant_per5yf_c0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_per5yf_d0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_per5yf_e0(editorContext, node));
-    editorCell.addEditorCell(this.createCollection_per5yf_f0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_per5yf_f0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_per5yf_g0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_per5yf_h0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_per5yf_i0(editorContext, node));
+    editorCell.addEditorCell(this.createCollection_per5yf_j0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_per5yf_k0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_per5yf_l0(editorContext, node));
     return editorCell;
   }
 
@@ -80,7 +85,7 @@ public class LanguageView_Editor extends DefaultNodeEditor {
   }
 
   private EditorCell createConstant_per5yf_d0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "languages");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "hide");
     editorCell.setCellId("Constant_per5yf_d0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -89,6 +94,57 @@ public class LanguageView_Editor extends DefaultNodeEditor {
   private EditorCell createConstant_per5yf_e0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "{");
     editorCell.setCellId("Constant_per5yf_e0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+
+  private EditorCell createRefNode_per5yf_f0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
+    provider.setRole("hiddenConcepts");
+    provider.setNoTargetText("<no hiddenConcepts>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("hiddenConcepts");
+    }
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      IOperationContext opContext = editorContext.getOperationContext();
+      EditorManager manager = EditorManager.getInstanceFromContext(opContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
+    return editorCell;
+  }
+
+  private EditorCell createConstant_per5yf_g0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "}");
+    editorCell.setCellId("Constant_per5yf_g0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+
+  private EditorCell createConstant_per5yf_h0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "languages");
+    editorCell.setCellId("Constant_per5yf_h0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+
+  private EditorCell createConstant_per5yf_i0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "{");
+    editorCell.setCellId("Constant_per5yf_i0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
@@ -96,26 +152,26 @@ public class LanguageView_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  private EditorCell createCollection_per5yf_f0(EditorContext editorContext, SNode node) {
+  private EditorCell createCollection_per5yf_j0(EditorContext editorContext, SNode node) {
     EditorCell_Collection editorCell = EditorCell_Collection.createVertical(editorContext, node);
-    editorCell.setCellId("Collection_per5yf_f0");
+    editorCell.setCellId("Collection_per5yf_j0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(this.createRefNodeList_per5yf_a5a(editorContext, node));
+    editorCell.addEditorCell(this.createRefNodeList_per5yf_a9a(editorContext, node));
     return editorCell;
   }
 
-  private EditorCell createRefNodeList_per5yf_a5a(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new LanguageView_Editor.languagesListHandler_per5yf_a5a(node, "languages", editorContext);
+  private EditorCell createRefNodeList_per5yf_a9a(EditorContext editorContext, SNode node) {
+    AbstractCellListHandler handler = new LanguageView_Editor.languagesListHandler_per5yf_a9a(node, "languages", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_languages");
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
 
-  private static class languagesListHandler_per5yf_a5a extends RefNodeListHandler {
-    public languagesListHandler_per5yf_a5a(SNode ownerNode, String childRole, EditorContext context) {
+  private static class languagesListHandler_per5yf_a9a extends RefNodeListHandler {
+    public languagesListHandler_per5yf_a9a(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
 
@@ -151,9 +207,9 @@ public class LanguageView_Editor extends DefaultNodeEditor {
     }
   }
 
-  private EditorCell createConstant_per5yf_g0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_per5yf_k0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "");
-    editorCell.setCellId("Constant_per5yf_g0");
+    editorCell.setCellId("Constant_per5yf_k0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
@@ -161,9 +217,9 @@ public class LanguageView_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  private EditorCell createConstant_per5yf_h0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_per5yf_l0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "}");
-    editorCell.setCellId("Constant_per5yf_h0");
+    editorCell.setCellId("Constant_per5yf_l0");
     editorCell.setDefaultText("");
     return editorCell;
   }

@@ -38,7 +38,9 @@ public class Language_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createProperty_75gu8q_c0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_75gu8q_d0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_75gu8q_e0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNodeList_75gu8q_f0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_75gu8q_f0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNodeList_75gu8q_g0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_75gu8q_h0(editorContext, node));
     return editorCell;
   }
 
@@ -97,8 +99,15 @@ public class Language_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  private EditorCell createRefNodeList_75gu8q_f0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new Language_Editor.conceptsListHandler_75gu8q_f0(node, "concepts", editorContext);
+  private EditorCell createConstant_75gu8q_f0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "{");
+    editorCell.setCellId("Constant_75gu8q_f0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+
+  private EditorCell createRefNodeList_75gu8q_g0(EditorContext editorContext, SNode node) {
+    AbstractCellListHandler handler = new Language_Editor.conceptsListHandler_75gu8q_g0(node, "concepts", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_concepts");
     Style style = new StyleImpl();
@@ -108,8 +117,8 @@ public class Language_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  private static class conceptsListHandler_75gu8q_f0 extends RefNodeListHandler {
-    public conceptsListHandler_75gu8q_f0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class conceptsListHandler_75gu8q_g0 extends RefNodeListHandler {
+    public conceptsListHandler_75gu8q_g0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
 
@@ -143,5 +152,16 @@ public class Language_Editor extends DefaultNodeEditor {
         }
       }
     }
+  }
+
+  private EditorCell createConstant_75gu8q_h0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "}");
+    editorCell.setCellId("Constant_75gu8q_h0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 }
