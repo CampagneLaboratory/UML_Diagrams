@@ -34,3 +34,11 @@ Language o-- ConceptReference
 Viewed with the PlantUML chrome extension, you will see this diagram:
 
 ![UML Diagram](Pictures/PlantUmlRendering.png)
+
+New to MPS? 
+-----------
+MPS is a powerful platform, but it can be difficult to learn on your own. This book can help:
+
+The MPS Language Workbench: Volume I. 2014. Fabien Campagne (http://books.campagnelab.org).
+![MPSBook Cover](http://campagnelab.org/files/MPS_Book-Cover-Volume1-small.png) 
+
