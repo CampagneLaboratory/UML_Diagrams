@@ -6,7 +6,11 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa574c9c-b933-4943-b735-ea992e6572ee" name="Default" comment="" />
+    <list default="true" id="aa574c9c-b933-4943-b735-ea992e6572ee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/modules.xml" afterPath="$PROJECT_DIR$/.mps/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/workspace.xml" afterPath="$PROJECT_DIR$/.mps/workspace.xml" />
+    </list>
     <ignored path="UML_Diagrams.iws" />
     <ignored path=".mps/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +46,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UML_Diagrams" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UML_Diagrams" pinned="false" current="false" current-in-tab="false">
         <entry file="mps://node://UML_Diagrams.build/UML_Diagrams.build/UML_Diagrams">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -50,11 +54,11 @@
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretXRelative" value="224" />
-                    <property name="caretX" value="315" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="15" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_url" cellNumber="0" isInList="false">
-                      <node node_reference="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/6642819616994346899" />
+                    <cellInfo cellId="Constant_vny568_q0" cellNumber="0" isInList="false">
+                      <node node_reference="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -62,7 +66,7 @@
                 <folded />
                 <enabledHints />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/6642819616994346899" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -72,10 +76,158 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LanguageView" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/LanguageView">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="15" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                      <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242505637" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+              <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242505637" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Language" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/Language">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="15" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                      <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/9012155033979373853" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+              <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/9012155033979373853" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConceptReference" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/ConceptReference">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="15" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                      <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+              <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.57429045" vertical-offset="166" max-vertical-offset="765">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfView" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://Sandbox/Self/SelfView">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretXRelative" value="88" />
+                    <property name="caretX" value="205" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:3f2737c5-dffa-41f6-97ba-e822a8889745(Self)/3327321330648331664" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfView.puml" pinned="false" current="false" current-in-tab="false">
+        <entry file="previewSelf/SelfView.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="23" column="175" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
   </component>
   <component name="MPSBookmarkManager">
     <option name="myBookmarkInfos">
@@ -154,7 +306,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="FileSystem" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -167,7 +319,16 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
-      <pane id="FileSystem" />
+      <pane id="FileSystem">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,6 +343,28 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="org.campagnelab.diagrams.structure">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -208,6 +391,24 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Sandbox">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Self">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -219,7 +420,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="generator.manager" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -243,8 +444,6 @@
           <option name="myAntOptions" />
         </MyState>
       </mySettings>
-      <RunnerSettings RunnerId="Default Runner" />
-      <ConfigurationWrapper RunnerId="Default Runner" />
       <method />
     </configuration>
     <configuration default="true" type="Build Script" factoryName="Build Script">
@@ -413,11 +612,11 @@
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretXRelative" value="224" />
-                <property name="caretX" value="315" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="15" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_url" cellNumber="0" isInList="false">
-                  <node node_reference="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/6642819616994346899" />
+                <cellInfo cellId="Constant_vny568_q0" cellNumber="0" isInList="false">
+                  <node node_reference="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/8075715013273436631" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -425,12 +624,134 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:51b55d88-e9be-4cda-94d8-53a2dd597d79(UML_Diagrams.build)/6642819616994346899" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
             <enabledHints />
           </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/LanguageView">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                  <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242505637" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242505637" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/Language">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                  <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/9012155033979373853" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/9012155033979373853" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://org.campagnelab.diagrams/org.campagnelab.diagrams.structure/ConceptReference">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                  <node node_reference="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Sandbox/Self/SelfView">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretXRelative" value="88" />
+                <property name="caretX" value="205" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:3f2737c5-dffa-41f6-97ba-e822a8889745(Self)/3327321330648331664" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0700f613-daa4-455e-bbd7-727e84a7dfca(org.campagnelab.diagrams.structure)/5039633819242522483" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57429045" vertical-offset="166" max-vertical-offset="765">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>

@@ -9,7 +9,7 @@ Import the language in a sandbox model under Used Languages and create a Languag
 ![AST View](Pictures/AST_View.png)
 
 If you generate or preview generation, you will create this file:
-
+```
 @startuml
 
 package org.campagnelab.diagrams {
@@ -30,6 +30,7 @@ Language o-- ConceptReference
 
 }
 @enduml
+```
 
 Viewed with the PlantUML chrome extension, you will see this diagram:
 
