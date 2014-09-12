@@ -42,9 +42,16 @@ Viewed with the PlantUML chrome extension, you will see this diagram:
 Other Features
 --------------
  * Properties will be shown for concept that contain them.
+ * Aggregation roles are shown and followed to discover connected Concepts.
+ * You can decide to hide concepts that are discovered through extends or aggregation relationships. Add a reference to them in the hide concept section.
  * This language generates to Plant UML text format using a generator that takes
  advantage of the TextOutput language. Take a look how this is done to see how you
  can create text files with the generator aspect of MPS.
+
+Download
+--------
+
+You can obtain this language from the Jetbrains MPS plugin repository. If the plugin was just announced, it may not yet have cleared moderation. Download it directly from [here](http://campagnelab.org/software/mps-plugins/). Note that this plugin depends on the org.campagnelab.TextOutput language, which must also be installed.
 
 New to MPS? 
 -----------
