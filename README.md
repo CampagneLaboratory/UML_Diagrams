@@ -20,6 +20,16 @@ package org.campagnelab.diagrams {
 class LanguageView {
 }
 LanguageView o-- Language : languages
+LanguageView o-- HiddenConcepts : hiddenConcepts
+
+class ConceptReference {
+}
+
+class Language {
+}
+Language o-- ConceptReference : concepts
+}
+@enduml
 ```
 
 Viewed with the PlantUML chrome extension, you will see this diagram:
