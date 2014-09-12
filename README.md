@@ -51,7 +51,7 @@ Other Features
 Download
 --------
 
-You can obtain this language from the Jetbrains MPS plugin repository. If the plugin was just announced, it may not yet have cleared moderation. Download it directly from [here](http://campagnelab.org/software/mps-plugins/). Note that this plugin depends on the org.campagnelab.TextOutput language, which must also be installed.
+You can obtain this language from the Jetbrains [MPS plugin repository](http://plugins.jetbrains.com/plugin/7556?pr=). If the plugin was just announced, it may not yet have cleared moderation. Download it directly from [here](http://campagnelab.org/software/mps-plugins/). Note that this plugin depends on the org.campagnelab.TextOutput language, which must also be installed.
 
 New to MPS? 
 -----------
