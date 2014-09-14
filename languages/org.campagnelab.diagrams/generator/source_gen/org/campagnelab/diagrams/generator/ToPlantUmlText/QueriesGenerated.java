@@ -6,12 +6,13 @@ import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.template.BaseMappingRuleContext;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ISelector;
-import jetbrains.mps.generator.template.PropertyMacroContext;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.generator.template.PropertyMacroContext;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.IfMacroContext;
 import jetbrains.mps.internal.collections.runtime.ITranslator2;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
@@ -24,17 +25,27 @@ public class QueriesGenerated {
   public final boolean NEEDS_OPCONTEXT = false;
 
   public static boolean baseMappingRule_Condition_2103504629858911172(final BaseMappingRuleContext _context) {
-    return ListSequence.fromList(SModelOperations.getRoots(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).all(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return !(ListSequence.fromList(SLinkOperations.getTargets(it, "hidden", true)).where(new IWhereFilter<SNode>() {
-          public boolean accept(SNode it) {
-            return (SLinkOperations.getTarget(it, "concept", false) != null);
-          }
-        }).select(new ISelector<SNode, SNode>() {
-          public SNode select(SNode it) {
-            return SLinkOperations.getTarget(it, "concept", false);
-          }
-        }).contains(_context.getNode()));
+    boolean doShow = !(ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SNodeOperations.getConceptDeclaration(it);
+      }
+    }).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode hiddenConcept) {
+        return hiddenConcept == _context.getNode();
+      }
+    }));
+    _context.showInformationMessage(_context.getNode(), SPropertyOperations.getString(_context.getNode(), "name") + " condition evaluates to " + doShow);
+    return doShow;
+  }
+
+  public static boolean baseMappingRule_Condition_6491148448062743146(final BaseMappingRuleContext _context) {
+    return ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SNodeOperations.getConceptDeclaration(SNodeOperations.getConceptDeclaration(it));
+      }
+    }).all(new IWhereFilter<SNode>() {
+      public boolean accept(SNode hiddenConcept) {
+        return SPropertyOperations.getString(hiddenConcept, "name").equals(SPropertyOperations.getString(_context.getNode(), "name"));
       }
     });
   }
@@ -48,18 +59,90 @@ public class QueriesGenerated {
   }
 
   public static Object propertyMacro_GetPropertyValue_6921256030982247014(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), "name");
-  }
-
-  public static Object propertyMacro_GetPropertyValue_2103504629858709414(final PropertyMacroContext _context) {
     return ((String) _context.getVariable("var:sourceName"));
   }
 
-  public static Object propertyMacro_GetPropertyValue_2103504629858711278(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetPropertyValue_6491148448063223309(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448063223321(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108514753(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108936219(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString_def(_context.getNode(), "sourceCardinality", "0..1").toString();
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108516601(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), "target", false), "name");
   }
 
-  public static Object propertyMacro_GetPropertyValue_2103504629858727665(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetPropertyValue_6985991452108520056(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "role");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108602852(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108796389(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString_def(_context.getNode(), "sourceCardinality", "0..1").toString();
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108604256(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), "target", false), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6985991452108606286(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "role");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062742880(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062742901(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062742913(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743029(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743039(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString_def(_context.getNode(), "sourceCardinality", "0..1").toString();
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743050(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), "target", false), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743061(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "role");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743098(final PropertyMacroContext _context) {
+    return ((String) _context.getVariable("var:sourceName"));
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743107(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString_def(_context.getNode(), "sourceCardinality", "0..1").toString();
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743118(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), "target", false), "name");
+  }
+
+  public static Object propertyMacro_GetPropertyValue_6491148448062743129(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), "role");
   }
 
@@ -80,8 +163,9 @@ public class QueriesGenerated {
   }
 
   public static boolean ifMacro_Condition_6921256030982536411(final IfMacroContext _context) {
-    return (SLinkOperations.getTarget(_context.getNode(), "extends", false) != null) & !(isEmptyString(ListSequence.fromList(SModelOperations.getRoots(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).translate(new ITranslator2<SNode, String>() {
-      public Iterable<String> translate(SNode it) {
+    _context.showInformationMessage(ListSequence.fromList(SModelOperations.getRoots(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).first(), "hidden Concepts:");
+    return (SLinkOperations.getTarget(_context.getNode(), "extends", false) != null) && !(ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).translate(new ITranslator2<SNode, SNode>() {
+      public Iterable<SNode> translate(SNode it) {
         return ListSequence.fromList(SLinkOperations.getTargets(it, "hidden", true)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
             return (SLinkOperations.getTarget(it, "concept", false) != null);
@@ -90,24 +174,122 @@ public class QueriesGenerated {
           public SNode select(SNode it) {
             return SLinkOperations.getTarget(it, "concept", false);
           }
-        }).select(new ISelector<SNode, String>() {
-          public String select(SNode it) {
-            return SPropertyOperations.getString(it, "name");
-          }
         });
       }
-    }).findFirst(new IWhereFilter<String>() {
-      public boolean accept(String it) {
-        return it.equals(SPropertyOperations.getString(_context.getNode(), "name"));
+    }).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode hiddenConcept) {
+        return hiddenConcept == SLinkOperations.getTarget(_context.getNode(), "extends", false);
       }
-    })));
+    }));
+  }
+
+  public static boolean ifMacro_Condition_6491148448063223329(final IfMacroContext _context) {
+
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "implements", true)).isNotEmpty();
+  }
+
+  public static boolean ifMacro_Condition_6491148448062742921(final IfMacroContext _context) {
+
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "extends", true)).isNotEmpty();
   }
 
   public static Iterable<SNode> sourceNodesQuery_5039633819243868119(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getTargets(_context.getNode(), "propertyDeclaration", true);
   }
 
-  public static Iterable<SNode> sourceNodesQuery_2103504629858700153(final SourceSubstituteMacroNodesContext _context) {
+  public static Iterable<SNode> sourceNodesQuery_6491148448063257016(final SourceSubstituteMacroNodesContext _context) {
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "implements", true)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return (SLinkOperations.getTarget(it, "intfc", false) != null);
+      }
+    }).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SLinkOperations.getTarget(it, "intfc", false);
+      }
+    }).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode interfaceConcept) {
+        return !(ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).translate(new ITranslator2<SNode, String>() {
+          public Iterable<String> translate(SNode it) {
+            return ListSequence.fromList(SLinkOperations.getTargets(it, "hidden", true)).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return (SLinkOperations.getTarget(it, "concept", false) != null);
+              }
+            }).select(new ISelector<SNode, SNode>() {
+              public SNode select(SNode it) {
+                return SLinkOperations.getTarget(it, "concept", false);
+              }
+            }).select(new ISelector<SNode, String>() {
+              public String select(SNode it) {
+                return SPropertyOperations.getString(SNodeOperations.getConceptDeclaration(it), "name");
+              }
+            });
+          }
+        }).contains(SPropertyOperations.getString(interfaceConcept, "name")));
+      }
+    });
+  }
+
+  public static Iterable<SNode> sourceNodesQuery_6985991452108506797(final SourceSubstituteMacroNodesContext _context) {
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "linkDeclaration", true)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.hasValue(it, "metaClass", "reference", "reference");
+      }
+    });
+  }
+
+  public static Iterable<SNode> sourceNodesQuery_6985991452108590527(final SourceSubstituteMacroNodesContext _context) {
+    if (LOG.isInfoEnabled()) {
+      LOG.info("genContext.sourceName" + ((String) _context.getVariable("var:sourceName")));
+    }
+
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "linkDeclaration", true)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.hasValue(it, "metaClass", "aggregation", "reference");
+      }
+    });
+  }
+
+  public static Iterable<SNode> sourceNodesQuery_6491148448062782542(final SourceSubstituteMacroNodesContext _context) {
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "extends", true)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return (SLinkOperations.getTarget(it, "intfc", false) != null);
+      }
+    }).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SLinkOperations.getTarget(it, "intfc", false);
+      }
+    }).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode interfaceConcept) {
+        return !(ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).translate(new ITranslator2<SNode, String>() {
+          public Iterable<String> translate(SNode it) {
+            return ListSequence.fromList(SLinkOperations.getTargets(it, "hidden", true)).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return (SLinkOperations.getTarget(it, "concept", false) != null);
+              }
+            }).select(new ISelector<SNode, SNode>() {
+              public SNode select(SNode it) {
+                return SLinkOperations.getTarget(it, "concept", false);
+              }
+            }).select(new ISelector<SNode, String>() {
+              public String select(SNode it) {
+                return SPropertyOperations.getString(SNodeOperations.getConceptDeclaration(it), "name");
+              }
+            });
+          }
+        }).contains(SPropertyOperations.getString(interfaceConcept, "name")));
+      }
+    });
+  }
+
+  public static Iterable<SNode> sourceNodesQuery_6491148448062743008(final SourceSubstituteMacroNodesContext _context) {
+    return ListSequence.fromList(SLinkOperations.getTargets(_context.getNode(), "linkDeclaration", true)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.hasValue(it, "metaClass", "reference", "reference");
+      }
+    });
+  }
+
+  public static Iterable<SNode> sourceNodesQuery_6491148448062743070(final SourceSubstituteMacroNodesContext _context) {
     if (LOG.isInfoEnabled()) {
       LOG.info("genContext.sourceName" + ((String) _context.getVariable("var:sourceName")));
     }
@@ -128,6 +310,22 @@ public class QueriesGenerated {
       public SNode select(SNode it) {
         return SLinkOperations.getTarget(it, "concept", false);
       }
+    }).where(new IWhereFilter<SNode>() {
+      public boolean accept(final SNode conceptToShow) {
+        return !(ListSequence.fromList(SModelOperations.getNodes(_context.getInputModel(), "org.campagnelab.diagrams.structure.HiddenConcepts")).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode hiddenConcept) {
+            return ListSequence.fromList(SLinkOperations.getTargets(hiddenConcept, "hidden", true)).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return (SLinkOperations.getTarget(it, "concept", false) != null);
+              }
+            }).select(new ISelector<SNode, SNode>() {
+              public SNode select(SNode it) {
+                return SLinkOperations.getTarget(it, "concept", false);
+              }
+            }).contains(SNodeOperations.getConceptDeclaration(conceptToShow));
+          }
+        }));
+      }
     });
   }
 
@@ -143,9 +341,9 @@ public class QueriesGenerated {
     return SPropertyOperations.getString(_context.getNode(), "name");
   }
 
-  protected static Logger LOG = LogManager.getLogger(QueriesGenerated.class);
-
-  private static boolean isEmptyString(String str) {
-    return str == null || str.length() == 0;
+  public static Object insertMacro_varValue_6491148448062743137(final TemplateQueryContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), "name");
   }
+
+  protected static Logger LOG = LogManager.getLogger(QueriesGenerated.class);
 }

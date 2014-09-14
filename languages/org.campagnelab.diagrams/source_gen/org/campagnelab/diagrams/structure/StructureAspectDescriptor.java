@@ -18,13 +18,15 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 1:
         return new ConceptDescriptorBuilder("org.campagnelab.diagrams.structure.HiddenConcepts").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").children(new String[]{"hidden"}, new boolean[]{true}).create();
       case 2:
-        return new ConceptDescriptorBuilder("org.campagnelab.diagrams.structure.Language").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").children(new String[]{"concepts"}, new boolean[]{true}).create();
+        return new ConceptDescriptorBuilder("org.campagnelab.diagrams.structure.InterfaceConceptReference").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").references("ref").create();
       case 3:
+        return new ConceptDescriptorBuilder("org.campagnelab.diagrams.structure.Language").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").children(new String[]{"concepts"}, new boolean[]{true}).create();
+      case 4:
         return new ConceptDescriptorBuilder("org.campagnelab.diagrams.structure.LanguageView").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").children(new String[]{"languages", "hiddenConcepts"}, new boolean[]{true, false}).alias("Language View", "").create();
       default:
         return StructureAspectInterpreted.getInstance().getDescriptor(conceptFqName);
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.HiddenConcepts", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.HiddenConcepts", "org.campagnelab.diagrams.structure.InterfaceConceptReference", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
 }

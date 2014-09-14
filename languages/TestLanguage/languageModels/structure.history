@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+  <StructureModification>
+    <dependencies>
+      <model index="3mk1" modelUID="r:6ed33036-bbe3-4042-a1ed-6f74d26887f1(TestLanguage.structure)" version="-1" />
+    </dependencies>
+    <rename id="3mk1.6985991452109129896" type="CONCEPT" from="InterfaceConcept" to="Interface" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="3mk1" modelUID="r:6ed33036-bbe3-4042-a1ed-6f74d26887f1(TestLanguage.structure)" version="0" />
+    </dependencies>
+    <rename id="3mk1.6491148448063703640" type="CONCEPT" from="Ancesttor" to="Ancestor" />
+  </StructureModification>
+</history>
+

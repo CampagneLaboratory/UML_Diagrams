@@ -3,11 +3,24 @@
 package TestLanguage {
 
 class Child {
+
++myInt
+
++myString
+
++myBool
 }
+hide empty members
 
 class Parent {
 }
-Parent o-- Child : child
+hide empty members
+Parent o-- "0..1"ReferedTo : ref
+Parent *-- "0..1" Child : child
+
+class InterfaceConcept {
+}
+hide empty members
 }
 @enduml
 

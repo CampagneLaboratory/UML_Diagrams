@@ -4,15 +4,19 @@ package org.campagnelab.diagrams {
 
 class LanguageView {
 }
-LanguageView o-- Language : languages
-LanguageView o-- HiddenConcepts : hiddenConcepts
+hide empty members
+LanguageView *-- "0..n" Language : languages
+LanguageView *-- "0..1" HiddenConcepts : hiddenConcepts
 
 class ConceptReference {
 }
+hide empty members
+ConceptReference o-- "1"AbstractConceptDeclaration : concept
 
 class Language {
 }
-Language o-- ConceptReference : concepts
+hide empty members
+Language *-- "0..n" ConceptReference : concepts
 }
 @enduml
 

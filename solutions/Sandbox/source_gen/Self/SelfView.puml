@@ -1,18 +1,34 @@
 @startuml
+hide empty members
 
 package org.campagnelab.diagrams {
 
 class LanguageView {
 }
-LanguageView o-- Language : languages
-LanguageView o-- HiddenConcepts : hiddenConcepts
+
+' this class extends:
+' this class has interfaces:
+INamedConcept <|-- LanguageView 
+
+LanguageView *-- "0..n" Language : languages
+LanguageView *-- "0..1" HiddenConcepts : hiddenConcepts
 
 class ConceptReference {
 }
 
+' this class extends:
+' this class has interfaces:
+
+ConceptReference o-- "1"AbstractConceptDeclaration : concept
+
 class Language {
 }
-Language o-- ConceptReference : concepts
+
+' this class extends:
+' this class has interfaces:
+INamedConcept <|-- Language 
+
+Language *-- "0..n" ConceptReference : concepts
 }
 @enduml
 

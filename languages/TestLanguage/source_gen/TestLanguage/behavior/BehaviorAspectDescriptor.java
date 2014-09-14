@@ -12,14 +12,18 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 1:
+      case 2:
         return new Parent_BehaviorDescriptor();
-      case 0:
+      case 1:
         return new Child_BehaviorDescriptor();
+      case 3:
+        return new ReferedTo_BehaviorDescriptor();
+      case 0:
+        return new Ancestor_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TestLanguage.structure.Child", "TestLanguage.structure.Parent"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TestLanguage.structure.Ancestor", "TestLanguage.structure.Child", "TestLanguage.structure.Parent", "TestLanguage.structure.ReferedTo"};
 }

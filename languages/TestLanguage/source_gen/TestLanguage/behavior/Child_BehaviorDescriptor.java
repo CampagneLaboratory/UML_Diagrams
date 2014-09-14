@@ -4,7 +4,7 @@ package TestLanguage.behavior;
 
 import jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor;
 
-public class Child_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
+public class Child_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor implements Interface_BehaviorDescriptor {
   public Child_BehaviorDescriptor() {
   }
 

@@ -14,13 +14,19 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
   public ConceptDescriptor getDescriptor(String conceptFqName) {
     switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0b, conceptFqName)) {
       case 0:
-        return new ConceptDescriptorBuilder("TestLanguage.structure.Child").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").create();
+        return new ConceptDescriptorBuilder("TestLanguage.structure.Ancestor").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").create();
       case 1:
-        return new ConceptDescriptorBuilder("TestLanguage.structure.Parent").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").children(new String[]{"child"}, new boolean[]{false}).create();
+        return new ConceptDescriptorBuilder("TestLanguage.structure.Child").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept", "TestLanguage.structure.Interface").properties("myInt", "myString", "myBool").create();
+      case 2:
+        return new ConceptDescriptorBuilder("TestLanguage.structure.Interface").interface_().create();
+      case 3:
+        return new ConceptDescriptorBuilder("TestLanguage.structure.Parent").super_("TestLanguage.structure.Ancestor").parents("TestLanguage.structure.Ancestor").references("ref").children(new String[]{"child"}, new boolean[]{false}).create();
+      case 4:
+        return new ConceptDescriptorBuilder("TestLanguage.structure.ReferedTo").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").create();
       default:
         return StructureAspectInterpreted.getInstance().getDescriptor(conceptFqName);
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TestLanguage.structure.Child", "TestLanguage.structure.Parent"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TestLanguage.structure.Ancestor", "TestLanguage.structure.Child", "TestLanguage.structure.Interface", "TestLanguage.structure.Parent", "TestLanguage.structure.ReferedTo"};
 }

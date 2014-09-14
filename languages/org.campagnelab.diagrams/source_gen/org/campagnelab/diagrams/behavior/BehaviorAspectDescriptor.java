@@ -12,18 +12,20 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 3:
+      case 4:
         return new LanguageView_BehaviorDescriptor();
       case 0:
         return new ConceptReference_BehaviorDescriptor();
-      case 2:
+      case 3:
         return new Language_BehaviorDescriptor();
       case 1:
         return new HiddenConcepts_BehaviorDescriptor();
+      case 2:
+        return new InterfaceConceptReference_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.HiddenConcepts", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"org.campagnelab.diagrams.structure.ConceptReference", "org.campagnelab.diagrams.structure.HiddenConcepts", "org.campagnelab.diagrams.structure.InterfaceConceptReference", "org.campagnelab.diagrams.structure.Language", "org.campagnelab.diagrams.structure.LanguageView"};
 }
